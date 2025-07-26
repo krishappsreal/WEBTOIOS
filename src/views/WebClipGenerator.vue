@@ -2,46 +2,46 @@
   <v-container>
     <v-responsive class="d-flex align-center text-center">
       <div class="d-flex justify-center">
-        <p class="text-h3 font-weight-bold">Web&nbsp;Clipper</p>
-        <p class="text-caption" align="right">V1.1.0</p>
+        <p class="text-h3 font-weight-bold">Web&nbsp;to&nbsp;iOS</p>
+        <p class="text-caption" align="right">by Krishapps</p>
       </div>
 
       <div class="py-2" />
       
       <div class="text-body-2 font-weight-light mb-n1">
-        Welcome to the Web Clipper a generator of Web Clips for iOS.
+        Üdvözlünk a Krishapps Web to iOS konvertálójában. Ezzel a konvertálóval könnyedén konvertálhatsz weboldalakat alkalmazásokká. 
       </div>
 
       <div class="py-2" />
       <v-text-field 
-        label="Label"
+        label="App neve"
         v-model="label"
         density="compact"
-        placeholder="My App"
-        hint="The text shown below the icon on your home screen"
+        placeholder="Az én alkalmazásom"
+        hint="Az alkalmazás neve, amit a kezdőképernyőn is láthatsz. "
       ></v-text-field>
       <v-text-field 
         label="Id"
         v-model="id"
         density="compact"
-        hint="A unique id of the web clip. Use the same id to replace an existing App"  
+        hint="A webklip egyedi azonosítója. Ugyanezzel az azonosítóval lecserélhetsz egy meglévő alkalmazást."  
       ></v-text-field>
       <v-text-field 
         label="Url"
         v-model="url"
         density="compact"
-        placeholder="https://myurl.com or messages://"
-        hint="The URL to be opened. You can use locally register web hooks, too. Do not use spaces."
+        placeholder="https://pelda.hu vagy akár messages://"
+        hint="Az URL ami megjelenik az alkalmazásban. NE használj szóközt!"
         @focus="scrollIntoView"
       ></v-text-field>
       <v-checkbox 
-        label="Precomposed (do not adjust the icon)"
+        label="Előre komponált (ne módosítsa az ikont)"
         v-model="precomposed"
         density="compact"
         hide-details="true"
       ></v-checkbox>
       <v-checkbox 
-        label="Ignore manifest (force no Safari UI)"
+        label="Safari felhasználói felület kikényszerítése"
         v-model="ignoreManifestScope"
         density="compact"
       ></v-checkbox>
@@ -49,7 +49,7 @@
       <v-btn
         @click="generate"
       >
-        Generate
+        Generálás
       </v-btn>
 
       <div class="py-2" />
@@ -76,19 +76,19 @@ const ignoreManifestScope = ref(false)
 
 const generate = () => {
   if (!label.value) {
-    store.showSnackbar('Missing label!')
+    store.showSnackbar('Hiányzó címke!')
     return
   }
   if (!id.value) {
-    store.showSnackbar('Missing id!')
+    store.showSnackbar('Hiányzó ID!')
     return
   }
   if (!url.value  || !url.value === '') {
-    store.showSnackbar('Missing or invalid URL!')
+    store.showSnackbar('Hiányzó vagy nem megfelelő URL!')
     return
   }
   if (!image.value  || !image.value.data) {
-    store.showSnackbar('Missing image!')
+    store.showSnackbar('Hiányzó ikon!')
     return
   }
   const clip = {
