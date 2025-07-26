@@ -18,14 +18,14 @@
         <v-btn 
           @click="openImage"
         >
-          open
+          Megnyitás
         </v-btn>
         <br />
         <v-btn 
           class="mt-1"
           @click="loadImageFromClip"
         >
-          clipboard
+          Beillesztés
         </v-btn>
       </v-col>
     </v-row>
