@@ -28,9 +28,9 @@ export default defineConfig({
       injectRegister: 'auto',
       includeAssets: ['favicon.ico'],
       manifest: {
-        name: 'WebClipper',
-        short_name: 'WebClipper',
-        description: 'WebClipper',
+        name: 'Web to iOS',
+        short_name: 'WTI',
+        description: 'App to convert websites to an iOS app ',
         theme_color: '#121212',
         icons: [
           {
