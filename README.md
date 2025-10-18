@@ -1,63 +1,32 @@
-# Web Clipper
+# Krishapps Web to iOS
 
-App to install a Web Clip locally onto an iOS device.
+Webalkalmazás, ami átkonvertálja a weboldaladat egy iOS alkalmazássá.
 
-This is useful to have the look and feel of an app for an ordenary URL. The page
-is shown in fullscreen without any address bar and in it's own window. So, you
-can use it as any other app on your iOS device.
+Ez az eszköz minden iOS/iPadOS-t futtató eszközt támogat. Hasznos lehet akkor, ha esetleg gyorsan akarod
+elérni kedvenc weboldalaidat. Az alkalmazás nyílt forráskódú, így nyugodtan megnézheted kódját. 
 
-# Usage
+# Használata
 
-You can start the application from my [github homepage](https://olibu.github.io/wcg/).
-In case you want to be able to use the app offline, you can click on "Add to home screen"
-in Safari.
+Elindíthatod az alkalmazást [innen](https://2env-wti.krishapps.com/wcg#) vagy a https://2env-wti.krishapps.com/wcg oldalról. 
+Ha offline szeretnéd használni az alkalmazást, kövesd ezeket a lépéseket. 
+* Nyisd meg a weboldalt Safari-ban
+* Kattints a "Megosztás" gombra
+* Kattints a "Főképernyőhoz adás" menüpontra.
+Kész is vagy! Most már offline is konvertálhatsz weboldalt alkalmazássá. 
 
-Open the page in Safari and provide
-* Label: Name of the app on your homescreen
-* Id: Unique Id of the app (web clips with the same id will be replaced)
-* Url: URL to be opened by the Web Clip
-* Image: Image to be used for the Web Clip on your homescreen (open from your fotos or paste it from clipboard)
+Fontos: weboldalt alkalmazássá csak a Safari-ban tudsz konvertálni! Egyéb böngészőkben nem fog működni!
+A konvertáláshoz ezeket az információkat kell tudnod: 
+* App neve
+* App ID-je, azaz azonosítója (alkalmazások, amiknek ugyanaz az azonosítója át lesznek cserélve)
+* Url: Az URL, amit az alkalmazás mutatni fog. 
+* Ikon: a főképernyőn látható ikon (muszáj hozzáadni, ikon nélkül nem működik!) 
 
-Then you can "generate" you web clip. It will be automatically be loaded.
-After the installation of the Profile in "settings" of you device you
-will see an app icon on your homescreen.
-
-![Demo](WebClipper.gif)
-
-# Todo:
-
-* Sizecheck for images
-* Storage of Web Clips for later changes
-
-# Releases
-
-## 1.1.0
-
-* Do not check for http in URL to enable local web hooks
-* Manifest and precomposed parameter added
-
-## 1.0.0
-
-* PWA functionality added
-* Icon added
-
-## 0.9.0
-
-* initial version
-  
-# Credits
-
-Example to locally load an image (Thx to bradgorman).
-
-https://gist.github.com/bradgorman/4247000
-
-Example how to download a local file to iOS (Thx to Szymon Nowak).
-
-https://github.com/szimek/sharedrop
-
-Example how to use the clipboard on iOS (thx to Emanuel).
-https://stackoverflow.com/questions/490908/paste-an-image-from-clipboard-using-javascript
-
-## License
-
-WebClipper is licensed under the [MIT License](https://tldrlegal.com/l/mit)
+Rövid tutorial: ha hibamentesen akarod létrehozni alkalmazásod
+1. Nyisd meg a [weboldalt](https://2env-wti.krishapps.com/wcg)
+2. Írd be az app nevét a szövegdobozba
+3. Írd be az azonosítót a szövegdobozba (nem kötelező, hagyhatod úgy is ahogy van)
+4. Írd be az alkalmazás URL-ét.
+5. Válaszd ki, hogy előre komponált legyen, vagy hogy kikényszerítse a Safari felületet (ajánlott: Válaszd ki mindkettőt)
+6. Töltsd fel az ikont a fájlkezelőből, fotókból vagy a vágólapról.
+7. Nyomj rá a generálás gombra.
+8. A telefonod/tableted felületén felfog jönni egy üzenet: Profil letöltve. Nyomj rá a Bezárás gombra, majd lépj be a beállításokba. Onnan görgess le az "Általános" menüig, majd kattints rá. Keresd meg a VPN- és eszközfelügyelet menűt, kattints rá. Ott keresd meg a profilt. Kattints a telepítés gombra, majd add meg a jelszavad (ha van). Kapni fogsz egy figyelmeztetést, hogy a profil nincs aláírva. Nyomj a telepítés gombra. Mégegyszer megfogja kérdezni, hogy szeretnéd-e telepíteni, mégegyszer nyomj rá a piros telepítés gombra. Kész is vagy! Már meg is nyithatod az alkalmazást! 
