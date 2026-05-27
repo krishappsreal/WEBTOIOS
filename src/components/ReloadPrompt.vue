@@ -21,17 +21,17 @@
     >
       <div class="message">
         <span v-if="offlineReady">
-          App ready to work offline
+          Az alkalmazás készen áll, hogy offline működjön
         </span>
         <span v-else>
-          New version available!
+          Új verzió érhető el!
         </span>
       </div>
       <button v-if="needRefresh" @click="updateServiceWorker()">
-        Update
+        Frissítés
       </button>
       <button @click="close">
-        Close
+        Bezárás
       </button>
     </div>
   </template>
